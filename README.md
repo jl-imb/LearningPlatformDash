@@ -5,7 +5,7 @@ This is an interactive dashboard where you can login, create an account, and int
 - Backend: FastAPI, Python, Uvicorn
 - Database: Firebase/Firestore
 
-## Backend Setup
+## Backend setup
 
 1. Navigate to the backend directory (cd):
 
@@ -26,7 +26,7 @@ This is an interactive dashboard where you can login, create an account, and int
 5. Run the server:
 - uvicorn main:app --reload
 
-## Frontend Setup
+## Frontend setup
 
 1. Navigate to the frontend directory(cd):
 
@@ -35,3 +35,18 @@ This is an interactive dashboard where you can login, create an account, and int
 
 3. Start the dev server:
 - npm run dev
+
+## API endpoints and explanations
+
+- (POST) `/api/users/register`: registers a new user
+- (POST) `/api/users/login`: log in and get token
+- (GET) `/api/users/profile`: get a logged-in user profile
+- (GET) `/api/modules`: gets a list of modules
+- (POST) `/api/progress/complete-lesson`: lesson completed marking
+- (GET) `/api/progress/{user_id}`: for viewing progress (user-specific)
+
+## Time spent and challenges
+- Spent a total of 15-20 hours on the project
+- Was not sure how to initially structure different elements (would there be reused React components or would this be by page)
+- Had some technical issues with incorporating Firestore and utilizing authentication, but was able to troubleshoot by searching online documentation and observing previous problems others have had
+- Was my first time building a dashboard and didn't know how to define a color scheme and structure the UI. Due to limited time constraints, was not able to incorporate CSS libraries, but did the best I could.
