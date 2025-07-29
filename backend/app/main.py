@@ -6,7 +6,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "https://your-frontend-domain.vercel.app",]
+    "https://learning-platform-dash.vercel.app",]
 
 app.add_middleware(
     CORSMiddleware,
