@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
+from .routes import router 
 
 app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "https://learning-platform-dash.vercel.app",]
+    "https://learning-platform-dash.vercel.app",
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -16,6 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(router, prefix="/api")
 
 if __name__ == "__main__":
     import uvicorn
