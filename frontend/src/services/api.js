@@ -1,5 +1,5 @@
   const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://mellow-nurturing-production.up.railway.app/docs'
+  ? 'https://mellow-nurturing-production.up.railway.app'
   : 'http://localhost:8000';
     
   export async function registerUser(data) {
