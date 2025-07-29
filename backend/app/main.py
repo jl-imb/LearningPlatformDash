@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
-from routes import router  
+from .routes import router  # Import your routes
+
 app = FastAPI()
 
 origins = [
@@ -17,6 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include your router - no prefix needed since routes already have /api
 app.include_router(router)
 
 if __name__ == "__main__":
