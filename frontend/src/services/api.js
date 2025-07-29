@@ -1,4 +1,6 @@
-const BASE_URL = "https://mellow-nurturing-production.up.railway.app/docs";
+const BASE_URL = process.env.NODE_ENV === 'production' 
+? 'https://mellow-nurturing-production.up.railway.app/docs'
+: 'http://localhost:8000';
 
 export async function registerUser(data) {
   const res = await fetch(`${BASE_URL}/api/users/register`, {
